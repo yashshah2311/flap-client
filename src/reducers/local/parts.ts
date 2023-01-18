@@ -22,7 +22,7 @@ const initialState = [
   },
 ];
 
-const schoolsReducer = (state = initialState, action: AnyAction) => {
+const partsReducer = (state = initialState, action: AnyAction) => {
   switch (action.type) {
     case INCREMENT_PART: {
       const idx = state.findIndex(part => part.name === action.partName);
@@ -40,4 +40,4 @@ const schoolsReducer = (state = initialState, action: AnyAction) => {
   }
 };
 
-export default schoolsReducer;
+export default partsReducer;

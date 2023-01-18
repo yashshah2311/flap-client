@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import parts from './parts';
 
-const flapReducer = combineReducers({ parts });
+const localReducer = combineReducers({ parts });
 
-export default flapReducer;
+export default localReducer;
