@@ -58,8 +58,8 @@ git remote -v
 
 6. (Optional) Deploying to Github pages
 
-   - Change package.json's `homepage` key to point to own repo (eg `"homepage": "my-user.github.io/flap-client-submission`)
-   - Change package.json's `scripts.build` key to point to own repo (eg `"build": "webpack --env.repo_name='flap-client-submission'")
+   - Change package.json's `homepage` key to point to own repo (eg `"homepage": "my-user.github.io/flap-client-submission"`)
+   - Change package.json's `scripts.build` key to point to own repo (eg `"build": "webpack --env.repo_name='flap-client-submission'"`)
    - Run `yarn deploy`
 
 7. Email back to us with your repo and optionally your github pages url
