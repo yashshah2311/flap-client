@@ -2,6 +2,7 @@ import { Dispatch } from 'redux';
 
 export const INCREMENT_PART = 'local/INCREMENT_PART';
 export const DECREMENT_PART = 'local/DECREMENT_PART';
+export const ADD_PART = 'local/ADD_PART';
 
 export const incrementPart = (partName: string) => (dispatch: Dispatch<any>) =>
   dispatch({
@@ -14,3 +15,10 @@ export const decrementPart = (partName: string) => (dispatch: Dispatch<any>) =>
     type: DECREMENT_PART,
     partName,
   });
+
+  export const addPart = (partName: any) => (dispatch: Dispatch<any>) =>
+  dispatch({
+      type: ADD_PART,
+      partName,
+      amount: 0, // Initialize the amount to 0
+    });

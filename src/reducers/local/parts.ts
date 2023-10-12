@@ -1,7 +1,5 @@
 import { AnyAction } from 'redux';
-import { DECREMENT_PART, INCREMENT_PART } from '../../actions/parts';
-
-// import { v4 as uuid } from 'uuid';
+import { DECREMENT_PART, INCREMENT_PART, ADD_PART } from '../../actions/parts';
 
 const initialState = [
   {
@@ -24,17 +22,30 @@ const initialState = [
 
 const partsReducer = (state = initialState, action: AnyAction) => {
   switch (action.type) {
+    case ADD_PART:
+      // Check if the part name already exists
+      if (state.some(part => part.name === action.partName)) {
+        // Handle the error, for example, by returning the current state
+        return state;
+      }
+
+      // If it doesn't exist, add the new part
+      return [...state, { name: action.partName, amount: action.amount }];
+
     case INCREMENT_PART: {
-      const idx = state.findIndex(part => part.name === action.partName);
-      state[idx].amount += 1;
-      return state;
+      const partName = action.partName;
+      const updatedState = state.map(part =>
+        part.name === partName ? { ...part, amount: part.amount + 1 } : part
+      );
+      return updatedState;
     }
     case DECREMENT_PART: {
-      const idx = state.findIndex(part => part.name === action.partName);
-      state[idx].amount -= 1;
-      return state;
+      const partName = action.partName;
+      const updatedState = state.map(part =>
+        part.name === partName ? { ...part, amount: part.amount - 1 } : part
+      );
+      return updatedState;
     }
-
     default:
       return state;
   }

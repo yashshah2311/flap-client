@@ -1,2 +1,114 @@
-.partsList
-    list-style-type: none
+/* Home.sass */
+
+body 
+  font-family: Arial, sans-serif
+  background-color: #f0f0f0
+  margin: 0
+  padding: 0
+
+
+.container 
+  max-width: 800px
+  margin: 0 auto
+  padding: 20px
+  background-color: #fff
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+  border-radius: 5px
+
+
+h1 
+  font-size: 24px
+  color: #333
+  margin-bottom: 20px
+
+
+.partsList 
+  list-style: none
+  padding: 0
+
+
+.partsList li 
+  display: flex
+  justify-content: space-between
+  align-items: center
+  border: 1px solid #ccc
+  border-radius: 5px
+  padding: 10px
+  margin: 10px 0
+  background-color: #f9f9f9
+  transition: background-color 0.3s
+  cursor: pointer
+
+
+.partsList li.selected 
+  background-color: #42e9f5
+  color: #fff
+
+.partsList li button 
+  background-color: #000
+  color: #fff
+  border: none
+  border-radius: 50%
+  padding: 10px
+  cursor: pointer
+  transition: background-color 0.3s
+  margin: 0 5px
+
+
+.partsList li button:hover 
+  background-color: #2dbec3
+
+
+/* Style the decrement button */
+.partsList li .decrement-button 
+  background-color: #ff6347 /* Red color for the decrement button */
+
+
+.partsList li .decrement-button:hover 
+  background-color: #d9534f
+
+
+button 
+  background-color: #000
+  color: #fff
+  border: none
+  border-radius: 5px
+  padding: 5px 10px
+  cursor: pointer
+  transition: background-color 0.3s
+
+
+button:hover 
+  background-color: #2dbec3
+
+
+.addPart 
+  display: flex
+  align-items: center
+
+
+.addPart input[type="text"] 
+  width: 70%
+  padding: 10px
+  border: 1px solid #ccc
+  border-radius: 5px
+
+
+.addPart button 
+  background-color: #42e9f5
+  color: #fff
+  border: none
+  border-radius: 5px
+  padding: 10px
+  cursor: pointer
+  transition: background-color 0.3s
+
+
+.addPart button:hover 
+  background-color: #2dbec3
+
+
+.error 
+  color: red
+  margin-top: 10px
+
